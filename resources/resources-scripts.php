@@ -1,0 +1,1 @@
+<script src="../js/app.js?v=<?php echo time(); ?>"></script>

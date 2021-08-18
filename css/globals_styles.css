@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #2dc874;
+    --color2: #055353;
+    --color-letter: #575757;
+    --color1-hover: #219957;
+    --color2-hover: #114949;
+    --font: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+body {
+    font-family: var(--font);
+    font-size: 15px;
+    color: var(--color-letter);
+    background: #f5f5f5;
+}
+
+button, select, textarea {
+    border: none;
+    outline: none;
+}
+
+.container-form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+.container {
+    width: 100%;
+    padding: 20px 60px;
+}
+
+/* Form */
+
+.form {
+    width: 450px;
+    padding: 30px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 1px 1px 5px 2px rgba(204,204,204,0.42);
+    -webkit-box-shadow: 1px 1px 5px 2px rgba(204,204,204,0.42);
+    -moz-box-shadow: 1px 1px 5px 2px rgba(204,204,204,0.42);
+    background: #fff;
+}
+
+.form-logo {
+    margin-bottom: 15px;
+}
+
+.form-logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    animation: up-down 1.5s infinite linear;
+}
+
+.form-logo-text {
+    color: var(--color2);
+}
+
+.form-title {
+    color: var(--color2);
+    margin-bottom: 30px;
+}
+
+.form-logo-text span {
+    color: var(--color1);
+}
+
+.form-label {
+    display: block;
+    text-align: left;
+    padding: 5px;
+}
+
+.form-contentInput {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.form-contentInput-input {
+    width: 100%;
+    height: 100%;
+    border-radius: 80px;
+    border: 2px solid #dedede;
+    padding: 10px 30px;
+    transition: 0.3s ease;
+    font-weight: 600;
+    color: var(--color-letter);
+    background: transparent;
+}
+
+.form-contentInput-input::placeholder {
+    font-weight: 600;
+}
+
+.form-contentInput-input:focus {
+    border-color: var(--color1);
+}
+
+.form-contentInput-input:focus ~ .form-contentInput-icon {
+    color: var(--color1);
+}
+
+.form-contentInput-icon {
+    position: absolute;
+    right: 30px;
+    transition: 0.3s ease;
+    color: var(--color2);
+}
+
+.form-contentInput-button {
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: var(--color1);
+    transition: 0.3s ease;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-contentInput-button:hover {
+    background: var(--color1-hover);
+}
+
+/* End Form */
+
+/* FormSelect */
+.form-search {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form-search .form-contentInput {
+    width: 300px;
+}
+
+.form-search .form-contentInput:nth-child(2) {
+    margin-left: 10px;
+}
+
+.form-contentArea{
+    height: 100px;
+    border-radius: 10px;
+}
+
+.form-contentTextArea-textArea {
+    border-radius: 10px;
+}
+
+/* End FormSelect */
+
+/* Modal */
+.modal-container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 30px;
+    transition: 0.3s ease;
+}
+
+.form-modal {
+    box-shadow: none;
+    position: relative;
+}
+
+.modal-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    color: var(--color2);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.modal-button:hover {
+    color: var(--color1);
+}
+/* End Modal */
+
+/* Footer */
+.footer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position absolute;
+    bottom: 0;
+    background: #fff;
+}
+
+.footer h3 {
+    color: var(--color1);
+}
+
+.footer h3 {
+    color: var(--color2);
+}
+/* End Footer */
+
+/* Message */
+.message {
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 80px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 16px;
+    
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.message-modal {
+    margin: auto;
+    display: block;
+    padding: padding: 10px 20px;
+    text-align: center;
+}
+
+.message-icon {
+    margin-left: 10px;
+}
+
+/* End Message */
+
+/* Table */
+.table {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    border: none;
+}
+
+.table thead th {
+    background: var(--color1);
+    text-align:center;
+    padding: 10px;
+    color: #fff;
+}
+
+.table tbody tr td {
+    padding: 10px;
+}
+
+.table tbody tr::nth-child(odd) {
+    background: #ededed;
+}
+
+.table .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table .action-delete {
+    margin-left: 10px;
+}
+/* End Table */
+
+/* Animations */
+@keyframes up-down {
+    0% {transform: translateY(-5px)}
+    50% {transform: translateY(0)}
+    100% {transform: translateY(-5px)}
+}
+
+/* End Animations */
+
+
+/* JavaScript Class */
+
+.modal-container.active {
+    top: 0;
+}
+
+.message.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.message.error {
+    background: var(--color2);
+}
+
+.message.success {
+    background: var(--color1);
+}
+
+.menu-user-actions.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* End JavaScript Class */
